@@ -7,6 +7,7 @@ body {
   background-color: #e0e2e4;
   height: 100vh;
   position: relative;
+  margin: 0 auto;
   width: 300px;
 
 }
@@ -33,73 +34,6 @@ body {
 }
 
 
-
-
-
-
-/*Figura 1, Palo*/
-.n-1 {
-  animation: n1 3s ease-in 0s forwards, desaparecer 1s linear 9300ms forwards;
-  bottom: 100vh;
-  left: 250px;
-  opacity: 1;
-}
-.n-7 {
-  animation: n7 3s ease-in 0s forwards, n7b 500ms ease-in 10s forwards;
-  bottom: calc(100vh + 50px);
-  left: 250px;
-}
-.n-13 {
-  animation: n13 3s ease-in 0s forwards, n13b 500ms ease-in 10s forwards;
-  bottom: calc(100vh + 100px);
-  left: 250px;
-}
-.n-19 {
-  animation: n19 3s ease-in 0s forwards, n19b 500ms ease-in 10s forwards;
-  bottom: calc(100vh + 150px);
-  left: 250px;
-}
-
-/*animacion*/
-
-@keyframes n1 {
-  100% {
-    bottom: 0px;
-  }
-}
-
-@keyframes n7 {
-  100% {
-    bottom: 50px;
-  }
-}
-@keyframes n7b {
-  100% {
-    bottom: 0px;
-  }
-}
-
-@keyframes n13 {
-  100% {
-    bottom: 100px;
-  }
-}
-@keyframes n13b {
-  100% {
-    bottom: 50px;
-  }
-}
-
-@keyframes n19 {
-  100% {
-    bottom: 150px;
-  }
-}
-@keyframes n19b {
-  100% {
-    bottom: 100px;
-  }
-}
 /*---Animación desaparación---*/
 
 
@@ -117,7 +51,105 @@ body {
     opacity: 0;
   }
 }
+@keyframes desaparecer2 {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*---Animación desaparación---*/
+
+/*--- Movimientos ---*/
+@keyframes a0 {
+  0% {
+    bottom: 100vh;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes a50 {
+  0% {
+    bottom: calc(100vh + 50px);
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+@keyframes a100 {
+  0% {
+    bottom: calc(100vh + 100px);
+  }
+  100% {
+    bottom: 100px;
+  }
+}
+@keyframes a150 {
+  0% {
+    bottom: calc(100vh + 150px);
+  }
+  100% {
+    bottom: 150px;
+  }
+}
+@keyframes a50b {
+  0% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes a100b {
+  0% {
+    bottom: 100px;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+@keyframes a150b {
+  0% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 100px;
+  }
+}
+/*--- Movimientos ---*/
+
+
+
+/*Figura 1, Palo*/
+.n-1 {
+  animation: a0 3s ease-in 0s forwards, desaparecer 2s linear 9300ms forwards;
+  bottom: 100vh;
+  left: 250px;
+  opacity: 1;
+}
+.n-7 {
+  animation: a50 3s ease-in 0s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
+  bottom: calc(100vh + 50px);
+  left: 250px;
+}
+.n-13 {
+  animation: a100 3s ease-in 0s forwards, a100b 500ms ease-in 9500ms forwards, a50b 500ms ease-in 13500ms forwards, desaparecer 2s linear 17300ms forwards;
+  bottom: calc(100vh + 100px);
+  left: 250px;
+}
+.n-19 {
+  animation: a150 3s ease-in 0s forwards, a150b 500ms ease-in 9500ms forwards, a100b 500ms ease-in 13500ms forwards, a50b 500ms ease-in 17500ms forwards, desaparecer 2s linear 21300ms forwards;
+  bottom: calc(100vh + 150px);
+  left: 250px;
+}
 
 /*Figura 1, Palo*/
 
@@ -125,107 +157,49 @@ body {
 
 /*Figura 2, cuadrado*/
 .n-2 {
-  animation: n2 3s ease-in 3s forwards, desaparecer 1s linear 9300ms forwards;
+  animation: a0 3s ease-in 3s forwards, desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 200px;
 }
 .n-3 {
-  animation: n3 3s ease-in 3s forwards, desaparecer 1s linear 9300ms forwards;
+  animation: a0 3s ease-in 3s forwards, desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 150px;
 }
 .n-8 {
-  animation: n8 3s ease-in 3s forwards, n8b 500ms ease-in 10s forwards;
+  animation: a50 3s ease-in 3s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
   bottom: calc(100vh + 50px);
   left: 200px;
 }
 .n-9 {
-  animation: n9 3s ease-in 3s forwards, n9b 500ms ease-in 10s forwards;
+  animation: a50 3s ease-in 3s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
   bottom: calc(100vh + 50px);
   left: 150px;
 }
 
-/* animacion */
-@keyframes n2 {
-  100% {
-    bottom: 0px;
-  }
-}
-@keyframes n3 {
-  100% {
-    bottom: 0px;
-  }
-}
-@keyframes n8 {
-  100% {
-    bottom: 50px;
-  }
-}
-@keyframes n8b {
-  100% {
-    bottom: 0px;
-  }
-}
-@keyframes n9 {
-  100% {
-    bottom: 50px;
-  }
-}
-@keyframes n9b {
-  100% {
-    bottom: 0px;
-  }
-}
 /*Figura 2, cuadrado*/
 
 
 /*Figura 3, ele*/
 .n-4 {
-  animation: n4 3s ease-in 6s forwards, desaparecer 1s linear 9300ms forwards;
+  animation: a0 3s ease-in 6s forwards, desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 100px;
 }
 .n-5 {
-  animation: n5 3s ease-in 6s forwards, desaparecer 1s linear 9300ms forwards;
+  animation: a0 3s ease-in 6s forwards, desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 50px;
 }
 .n-6 {
-  animation: n6 3s ease-in 6s forwards, desaparecer 1s linear 9300ms forwards;
+  animation: a0 3s ease-in 6s forwards, desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 0px;
 }
 .n-12 {
-  animation: n12 3s ease-in 6s forwards, n12b 500ms linear 10s forwards;
+  animation: a50 3s ease-in 6s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
   bottom: calc(100vh + 50px);
   left: 0px;
-}
-
-
-@keyframes n4 {
-  100% {
-    bottom: 0px;
-  }
-}
-@keyframes n5 {
-  100% {
-    bottom: 0px;
-  }
-}
-@keyframes n6 {
-  100% {
-    bottom: 0px;
-  }
-}
-@keyframes n12 {
-  100% {
-    bottom: 50px;
-  }
-}
-@keyframes n12b {
-  100% {
-    bottom: 0px;
-  }
 }
 
 /*Figura 3, ele*/
@@ -237,21 +211,26 @@ body {
 
 /*---Figura 4, ele-2---*/
 .n-14 {
-  bottom: calc(100vh + 100px);
+  animation: a0 3s ease-in 14s forwards, desaparecer 2s linear 17300ms forwards;
+  bottom: 100vh;
   left: 200px;
 }
 .n-15 {
-  bottom: calc(100vh + 100px);
+  animation: a0 3s ease-in 14s forwards, desaparecer 2s linear 17300ms forwards;
+  bottom: 100vh;
   left: 150px;
 }
 .n-16 {
-  bottom: calc(100vh + 100px);
+  animation: a0 3s ease-in 14s forwards, desaparecer 2s linear 17300ms forwards;
+  bottom: 100vh;
   left: 100px;
 }
 .n-20 {
-  bottom: calc(100vh + 150px);
+  animation: a50 3s ease-in 14s forwards, a50b 500ms ease-in 17500ms forwards, desaparecer 2s linear 21300ms forwards;
+  bottom: calc(100vh + 50px);
   left: 200px;
 }
+
 /*Figura 4, ele-2*/
 
 
@@ -259,22 +238,25 @@ body {
 
 /*---Figura 5, zeta---*/
 .n-10 {
-  bottom: calc(100vh + 50px);
+  animation: a0 3s ease-in 10s forwards, desaparecer 2s linear 13300ms forwards;
+  bottom: 100vh;
   left: 100px;
 }
 .n-11 {
-  bottom: calc(100vh + 50px);
+  animation: a0 3s ease-in 10s forwards, desaparecer 2s linear 13300ms forwards;
+  bottom: 100vh;
   left: 50px;
 }
 .n-17 {
-  bottom: calc(100vh + 100px);
+  animation: a50 3s ease-in 10s forwards, a50b 500ms ease-in 13500ms forwards, desaparecer 2s linear 17300ms forwards;
+  bottom: calc(100vh + 50px);
   left: 50px;
 }
 .n-18 {
-  bottom: calc(100vh + 100px);
+  animation: a50 3s ease-in 10s forwards, a50b 500ms ease-in 13500ms forwards, desaparecer 2s linear 17300ms forwards;
+  bottom: calc(100vh + 50px);
   left: 0px;
 }
-
 /*Figura 5, zeta*/
 
 
@@ -282,19 +264,23 @@ body {
 
 /*---Figura 6, palo-2---*/
 .n-21 {
-  bottom: calc(100vh + 150px);
+  animation: a0 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
+  bottom: 100vh;
   left: 150px;
 }
 .n-22 {
-  bottom: calc(100vh + 150px);
+  animation: a0 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
+  bottom: 100vh;
   left: 100px;
 }
 .n-23 {
-  bottom: calc(100vh + 150px);
+  animation: a0 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
+  bottom: 100vh;
   left: 50px;
 }
 .n-24 {
-  bottom: calc(100vh + 150px);
+  animation: a0 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
+  bottom: 100vh;
   left: 0px;
 }
 /*---Figura 6, palo-2---*/
