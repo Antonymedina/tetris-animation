@@ -3,8 +3,10 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .wrapper {
-  background-color: #e0e2e4;
+  background-color: #1fc8db;
+  background-image: linear-gradient(180deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   height: 100vh;
   position: relative;
   margin: 0 auto;
@@ -18,19 +20,24 @@ body {
   display: block;
   position: absolute;
   margin: 0;
+  z-index: 0;
 }
 .zeta {
   background-color: #feb236;
+  box-shadow: 1px 1px 10px #feb236;
 
 }
 .ele {
   background-color: #034f84;
+  box-shadow: 1px 1px 10px #034f84;
 }
 .cuadrado {
   background-color: #d64161;
+  box-shadow: 1px 1px 10px #d64161;
 }
 .palo {
   background-color: #ff7b25;
+  box-shadow: 1px 1px 10px #ff7b25;
 }
 
 
@@ -68,6 +75,164 @@ body {
 /*---Animación desaparación---*/
 
 /*--- Movimientos ---*/
+@keyframes mov250 {
+  0% {
+    left: 100px;
+  }
+  29% {
+    left: 100px;
+  }
+  30% {
+    left: 150px;
+  }
+  49% {
+    left: 150px;
+  }
+  50% {
+    left: 200px;
+  }
+  79% {
+    left: 200px;
+  }
+  80% {
+    left: 250px;
+  }
+  100% {
+    left: 250px;
+  }
+}
+
+@keyframes mov200 {
+  0% {
+    left: 150px;
+  }
+  49% {
+    left: 150px;
+  }
+  50% {
+    left: 200px;
+  }
+  100% {
+    left: 200px;
+  }
+}
+
+@keyframes mov150 {
+  0% {
+    left: 100px;
+  }
+  49% {
+    left: 100px;
+  }
+  50% {
+    left: 150px;
+  }
+  100% {
+    left: 150px;
+  }
+}
+@keyframes mov150a {
+  0% {
+    left: 250px;
+  }
+  49% {
+    left: 250px;
+  }
+  50% {
+    left: 200px;
+  }
+  70% {
+    left: 200px;
+  }
+  71% {
+    left: 150px;
+  }
+  100% {
+    left: 150px;
+  }
+}
+@keyframes mov100a {
+  0% {
+    left: 50px;
+  }
+  49% {
+    left: 50px;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 100px;
+  }
+}
+
+@keyframes mov100 {
+  0% {
+    left: 200px;
+  }
+  49% {
+    left: 200px;
+  }
+  50% {
+    left: 150px;
+  }
+  70% {
+    left: 150px;
+  }
+  71% {
+    left: 100px;
+  }
+  100% {
+    left: 100px;
+  }
+}
+
+
+@keyframes mov50 {
+  0% {
+    left: 150px;
+  }
+  49% {
+    left: 150px;
+  }
+  50% {
+    left: 100px;
+  }
+  70% {
+    left: 100px;
+  }
+  71% {
+    left: 50px;
+  }
+  100% {
+    left: 50px;
+  }
+}
+
+
+@keyframes mov0 {
+  0% {
+    left: 100px;
+  }
+  49% {
+    left: 100px;
+  }
+  50% {
+    left: 50px;
+  }
+  70% {
+    left: 50px;
+  }
+  71% {
+    left: 0px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+
+
 @keyframes a0 {
   0% {
     bottom: 100vh;
@@ -130,23 +295,23 @@ body {
 
 /*Figura 1, Palo*/
 .n-1 {
-  animation: a0 3s ease-in 0s forwards, desaparecer 2s linear 9300ms forwards;
+  animation: a0 3s ease-in 0s forwards, mov250 3s ease-in 0s forwards, desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 250px;
   opacity: 1;
 }
 .n-7 {
-  animation: a50 3s ease-in 0s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
+  animation: a50 3s ease-in 0s forwards, mov250 3s ease-in 0s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
   bottom: calc(100vh + 50px);
   left: 250px;
 }
 .n-13 {
-  animation: a100 3s ease-in 0s forwards, a100b 500ms ease-in 9500ms forwards, a50b 500ms ease-in 13500ms forwards, desaparecer 2s linear 17300ms forwards;
+  animation: a100 3s ease-in 0s forwards, mov250 3s ease-in 0s forwards, a100b 500ms ease-in 9500ms forwards, a50b 500ms ease-in 13500ms forwards, desaparecer 2s linear 17300ms forwards;
   bottom: calc(100vh + 100px);
   left: 250px;
 }
 .n-19 {
-  animation: a150 3s ease-in 0s forwards, a150b 500ms ease-in 9500ms forwards, a100b 500ms ease-in 13500ms forwards, a50b 500ms ease-in 17500ms forwards, desaparecer 2s linear 21300ms forwards;
+  animation: a150 3s ease-in 0s forwards, mov250 3s ease-in 0s forwards, a150b 500ms ease-in 9500ms forwards, a100b 500ms ease-in 13500ms forwards, a50b 500ms ease-in 17500ms forwards, desaparecer 2s linear 21300ms forwards;
   bottom: calc(100vh + 150px);
   left: 250px;
 }
@@ -157,22 +322,22 @@ body {
 
 /*Figura 2, cuadrado*/
 .n-2 {
-  animation: a0 3s ease-in 3s forwards, desaparecer 2s linear 9300ms forwards;
+  animation: a0 3s ease-in 3s forwards, mov200 3s ease-in 3s forwards, desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 200px;
 }
 .n-3 {
-  animation: a0 3s ease-in 3s forwards, desaparecer 2s linear 9300ms forwards;
+  animation: a0 3s ease-in 3s forwards, mov150 3s ease-in 3s forwards, desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 150px;
 }
 .n-8 {
-  animation: a50 3s ease-in 3s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
+  animation: a50 3s ease-in 3s forwards, mov200 3s ease-in 3s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
   bottom: calc(100vh + 50px);
   left: 200px;
 }
 .n-9 {
-  animation: a50 3s ease-in 3s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
+  animation: a50 3s ease-in 3s forwards, mov150 3s ease-in 3s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
   bottom: calc(100vh + 50px);
   left: 150px;
 }
@@ -182,22 +347,22 @@ body {
 
 /*Figura 3, ele*/
 .n-4 {
-  animation: a0 3s ease-in 6s forwards, desaparecer 2s linear 9300ms forwards;
+  animation: a0 3s ease-in 6s forwards, mov100 3s ease-in 6s forwards, desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 100px;
 }
 .n-5 {
-  animation: a0 3s ease-in 6s forwards, desaparecer 2s linear 9300ms forwards;
+  animation: a0 3s ease-in 6s forwards, mov50 3s ease-in 6s forwards,  desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 50px;
 }
 .n-6 {
-  animation: a0 3s ease-in 6s forwards, desaparecer 2s linear 9300ms forwards;
+  animation: a0 3s ease-in 6s forwards, mov0 3s ease-in 6s forwards, desaparecer 2s linear 9300ms forwards;
   bottom: 100vh;
   left: 0px;
 }
 .n-12 {
-  animation: a50 3s ease-in 6s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
+  animation: a50 3s ease-in 6s forwards, mov0 3s ease-in 6s forwards, a50b 500ms ease-in 9500ms forwards, desaparecer 2s linear 13300ms forwards;
   bottom: calc(100vh + 50px);
   left: 0px;
 }
@@ -211,24 +376,20 @@ body {
 
 /*---Figura 4, ele-2---*/
 .n-14 {
-  animation: a0 3s ease-in 14s forwards, desaparecer 2s linear 17300ms forwards;
+  animation: a0 3s ease-in 14s forwards, mov200 3s ease-in 14s forwards, desaparecer 2s linear 17300ms forwards;
   bottom: 100vh;
-  left: 200px;
 }
 .n-15 {
-  animation: a0 3s ease-in 14s forwards, desaparecer 2s linear 17300ms forwards;
+  animation: a0 3s ease-in 14s forwards, mov150 3s ease-in 14s forwards, desaparecer 2s linear 17300ms forwards;
   bottom: 100vh;
-  left: 150px;
 }
 .n-16 {
-  animation: a0 3s ease-in 14s forwards, desaparecer 2s linear 17300ms forwards;
+  animation: a0 3s ease-in 14s forwards, mov100a 3s ease-in 14s forwards, desaparecer 2s linear 17300ms forwards;
   bottom: 100vh;
-  left: 100px;
 }
 .n-20 {
-  animation: a50 3s ease-in 14s forwards, a50b 500ms ease-in 17500ms forwards, desaparecer 2s linear 21300ms forwards;
+  animation: a50 3s ease-in 14s forwards, mov200 3s ease-in 14s forwards, a50b 500ms ease-in 17500ms forwards, desaparecer 2s linear 21300ms forwards;
   bottom: calc(100vh + 50px);
-  left: 200px;
 }
 
 /*Figura 4, ele-2*/
@@ -238,22 +399,22 @@ body {
 
 /*---Figura 5, zeta---*/
 .n-10 {
-  animation: a0 3s ease-in 10s forwards, desaparecer 2s linear 13300ms forwards;
+  animation: a0 3s ease-in 10s forwards, mov100 3s ease-in 10s forwards, desaparecer 2s linear 13300ms forwards;
   bottom: 100vh;
   left: 100px;
 }
 .n-11 {
-  animation: a0 3s ease-in 10s forwards, desaparecer 2s linear 13300ms forwards;
+  animation: a0 3s ease-in 10s forwards, mov50 3s ease-in 10s forwards, desaparecer 2s linear 13300ms forwards;
   bottom: 100vh;
   left: 50px;
 }
 .n-17 {
-  animation: a50 3s ease-in 10s forwards, a50b 500ms ease-in 13500ms forwards, desaparecer 2s linear 17300ms forwards;
+  animation: a50 3s ease-in 10s forwards, mov50 3s ease-in 10s forwards, a50b 500ms ease-in 13500ms forwards, desaparecer 2s linear 17300ms forwards;
   bottom: calc(100vh + 50px);
   left: 50px;
 }
 .n-18 {
-  animation: a50 3s ease-in 10s forwards, a50b 500ms ease-in 13500ms forwards, desaparecer 2s linear 17300ms forwards;
+  animation: a50 3s ease-in 10s forwards, mov0 3s ease-in 10s forwards, a50b 500ms ease-in 13500ms forwards, desaparecer 2s linear 17300ms forwards;
   bottom: calc(100vh + 50px);
   left: 0px;
 }
@@ -264,22 +425,22 @@ body {
 
 /*---Figura 6, palo-2---*/
 .n-21 {
-  animation: a0 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
+  animation: a0 3s ease-in 18s forwards, mov150a 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
   bottom: 100vh;
   left: 150px;
 }
 .n-22 {
-  animation: a0 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
+  animation: a0 3s ease-in 18s forwards, mov100 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
   bottom: 100vh;
   left: 100px;
 }
 .n-23 {
-  animation: a0 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
+  animation: a0 3s ease-in 18s forwards, mov50 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
   bottom: 100vh;
   left: 50px;
 }
 .n-24 {
-  animation: a0 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
+  animation: a0 3s ease-in 18s forwards, mov0 3s ease-in 18s forwards, desaparecer 2s linear 21300ms forwards;
   bottom: 100vh;
   left: 0px;
 }
